@@ -48,7 +48,22 @@ export const Items: SidebarItem[] = [
         activeStyles: ['router-link-active'],
         iconStyle: 'fa fa-fw fa-dashboard',
         name: 'Component',
-        childrenSidebarItem: []
+        childrenSidebarItem: [
+            {
+                routerURLs: ['/bs-element'],
+                activeStyles: ['router-link-active'],
+                iconStyle: 'fa fa-fw fa-dashboard',
+                name: 'Boostrap Element',
+                childrenSidebarItem: []
+            },
+            {
+                routerURLs: ['/grid'],
+                activeStyles: ['router-link-active'],
+                iconStyle: 'fa fa-fw fa-dashboard',
+                name: 'Boostrap Grid',
+                childrenSidebarItem: []
+            }
+        ]
     },
 
 

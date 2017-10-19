@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SidebarItem, Items } from '../enhanceSidebar/sidebarItem'
 
 @Component({
     selector: 'app-sidebar',
@@ -6,16 +7,14 @@ import { Component } from '@angular/core';
     styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
+
+    private items = Items;
     isActive = false;
     showMenu = '';
     eventCalled() {
         this.isActive = !this.isActive;
     }
-    addExpandClass(element: any) {
-        if (element === this.showMenu) {
-            this.showMenu = '0';
-        } else {
-            this.showMenu = element;
-        }
-    }
+
+
+    
 }

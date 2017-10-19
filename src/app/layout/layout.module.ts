@@ -6,6 +6,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
 import { HeaderComponent, SidebarComponent } from '../shared';
+import { sidebarItemComponent } from '../shared/components/enhanceSidebar/enhancesidebarItem.component'
 
 @NgModule({
     imports: [
@@ -18,6 +19,7 @@ import { HeaderComponent, SidebarComponent } from '../shared';
         LayoutComponent,
         HeaderComponent,
         SidebarComponent,
+        sidebarItemComponent
     ]
 })
 export class LayoutModule { }

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { SidebarItem, Items } from './sidebarItem'
+import { SidebarItem } from './sidebarItem'
 
 @Component({
     selector: 'app-enhance-sidebar',
@@ -10,7 +10,9 @@ export class sidebarItemComponent {
 
     private _item: SidebarItem;
 
-    private isExpandable: Boolean = false;
+    public isExpandable: Boolean = false;
+
+    public isExpanded: Boolean = false;
 
     @Input() 
     set item(inputItem: SidebarItem) {
@@ -18,8 +20,11 @@ export class sidebarItemComponent {
         this.isExpandable = (inputItem.childrenSidebarItem.length > 0);
     }
 
-    get name(): SidebarItem { 
+    get item(): SidebarItem { 
         return this._item; 
     }
 
+    addExpandClass() {
+        this.isExpanded = !this.isExpanded;
+    }
 }
